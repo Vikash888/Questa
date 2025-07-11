@@ -1,1 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questa - Terms and Conditions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid #30363d;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(88, 166, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .app-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .developer-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #58a6ff, #79c0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 60px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(106, 90, 205, 0.05) 0%, rgba(135, 206, 235, 0.05) 100%);
+            border-radius: 15px;
+            border-left: 5px solid #6a5acd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: #4a47a3;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+            border-radius: 2px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .section li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ff6b6b;
+        }
+
+        .important-notice {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(255, 154, 158, 0.3);
+        }
+
+        .important-notice h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        .no-ads-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 184, 148, 0.3);
+        }
+
+        .proprietary-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #e17055, #fdcb6e);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(225, 112, 85, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 40px 20px;
+            }
+            
+            .app-title {
+                font-size: 2.5rem;
+            }
+            
+            .developer-name {
+                font-size: 1.4rem;
+            }
+            
+            .content {
+                padding: 40px 20px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="app-title">QUESTA</h1>
+            <div class="developer-name">Developed by VIKASH J</div>
+            <p class="subtitle">Professional Productivity Application</p>
+            <span class="no-ads-badge">AD-FREE EXPERIENCE</span>
+            <span class="proprietary-badge">PROPRIETARY SOFTWARE</span>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>1. Application Overview & Rights</h2>
+                <p><strong>Application Name:</strong> Questa</p>
+                <p><strong>Developer & Owner:</strong> <span style="color: #ff6b6b; font-weight: bold;">VIKASH J</span></p>
+                <p><strong>Company:</strong> Ant Sign Technologies</p>
+                <p><strong>Software Type:</strong> Proprietary Application</p>
+                <div class="highlight">
+                    <p><strong>ALL RIGHTS RESERVED:</strong> Questa is proprietary software exclusively owned by <strong>VIKASH J</strong> and Ant Sign Technologies. All intellectual property rights, including but not limited to source code, algorithms, design, functionality, and user interface, are fully reserved and protected under applicable copyright and intellectual property laws.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>2. Acceptance of Terms</h2>
+                <p>By downloading, installing, accessing, or using Questa, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these Terms, you must immediately discontinue use of the application and uninstall it from your device.</p>
+            </div>
+
+            <div class="section">
+                <h2>3. Data Ownership & Privacy Rights</h2>
+                <p><strong>Your Data Belongs to You:</strong> Unlike many applications, Questa respects your privacy and data ownership. All personal data, productivity information, tasks, notes, and any content you create within the application remains your property.</p>
+                <ul>
+                    <li>We collect minimal data necessary for app functionality</li>
+                    <li>Your personal information is encrypted and stored securely</li>
+                    <li>We do not sell, share, or monetize your personal data</li>
+                    <li>You have the right to export or delete your data at any time</li>
+                    <li>We are committed to transparent data practices</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. Ad-Free Commitment</h2>
+                <div class="highlight">
+                    <p><strong>NO ADVERTISEMENTS POLICY:</strong> <span style="color: #ff6b6b; font-weight: bold;">VIKASH J</span> strongly believes in providing an uninterrupted, premium user experience. Questa is and will remain completely ad-free. We do not display advertisements, sponsored content, or any form of promotional material within the application.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>5. Proprietary Software & Intellectual Property</h2>
+                <p>Questa is proprietary software protected by copyright and intellectual property laws. All rights are reserved by <strong>VIKASH J</strong> and Ant Sign Technologies.</p>
+                <ul>
+                    <li>You may not reverse engineer, decompile, or disassemble the application</li>
+                    <li>You may not copy, modify, distribute, or create derivative works</li>
+                    <li>You may not remove or alter any proprietary notices or labels</li>
+                    <li>Unauthorized reproduction or distribution is strictly prohibited</li>
+                    <li>All trademarks and service marks are the property of their respective owners</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>6. Developer Rights & Application Updates</h2>
+                <p><strong>Unlimited Modification Rights:</strong> <span style="color: #ff6b6b; font-weight: bold;">VIKASH J</span> reserves the absolute right to modify, update, enhance, or change any aspect of Questa at any time without prior notice. This includes but is not limited to:</p>
+                <ul>
+                    <li>Adding new features and functionality</li>
+                    <li>Modifying existing features or user interface</li>
+                    <li>Updating terms and conditions</li>
+                    <li>Changing pricing or subscription models</li>
+                    <li>Discontinuing certain features or services</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>7. User Responsibilities</h2>
+                <p>As a user of Questa, you agree to:</p>
+                <ul>
+                    <li>Use the application lawfully and in accordance with these terms</li>
+                    <li>Maintain the confidentiality of your account information</li>
+                    <li>Not attempt to gain unauthorized access to the application</li>
+                    <li>Not use the application for any illegal or harmful purposes</li>
+                    <li>Respect the intellectual property rights of the developer</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>8. Warranty & Liability</h2>
+                <p>While we strive to provide a high-quality application, Questa is provided "as is" without warranties of any kind. <strong>VIKASH J</strong> and Ant Sign Technologies shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the application.</p>
+            </div>
+
+            <div class="section">
+                <h2>9. Termination</h2>
+                <p>We reserve the right to terminate or suspend access to Questa at our sole discretion, with or without cause, and with or without notice. Upon termination, your right to use the application ceases immediately.</p>
+            </div>
+
+            <div class="section">
+                <h2>10. Governing Law & Jurisdiction</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of Tamil Nadu, India, without regard to conflict of law principles. Any disputes arising from these Terms or your use of Questa shall be subject to the exclusive jurisdiction of the courts in Tamil Nadu, India.</p>
+            </div>
+
+            <div class="section">
+                <h2>11. Contact Information</h2>
+                <p><strong>Developer:</strong> <span style="color: #58a6ff; font-weight: bold;">VIKASH J</span></p>
+                <p><strong>Company:</strong> Ant Sign Technologies</p>
+                <p><strong>Application:</strong> Questa</p>
+                <p><strong>Email:</strong> vikashspidey@gmail.com</p>
+                <p>For support, questions, or concerns, please contact us through the application's built-in support system or via email.</p>
+            </div>
+
+            <div class="section">
+                <h2>12. Privacy Policy</h2>
+                <p>Your privacy is important to us. This section outlines how we collect, use, and protect your personal information when you use Questa.</p>
+                
+                <h3 style="color: #4a47a3; margin-top: 25px; margin-bottom: 15px;">Data Collection</h3>
+                <p>We may collect the following types of information:</p>
+                <ul>
+                    <li><strong>Personal Data:</strong> Email address, name, phone number, and address (only when provided voluntarily)</li>
+                    <li><strong>Usage Data:</strong> Device information, IP address, browser type, app usage patterns, and diagnostic data</li>
+                    <li><strong>Device Information:</strong> With your permission, we may access location data, camera, and photo library for app features</li>
+                </ul>
+
+                <h3 style="color: #4a47a3; margin-top: 25px; margin-bottom: 15px;">How We Use Your Data</h3>
+                <p>We use your personal data to:</p>
+                <ul>
+                    <li>Provide and maintain our application services</li>
+                    <li>Manage your account and user registration</li>
+                    <li>Send important updates and security notifications</li>
+                    <li>Improve app functionality and user experience</li>
+                    <li>Analyze usage patterns for service enhancement</li>
+                </ul>
+
+                <h3 style="color: #4a47a3; margin-top: 25px; margin-bottom: 15px;">Data Sharing</h3>
+                <p>We may share your information only in the following limited circumstances:</p>
+                <ul>
+                    <li>With service providers who assist in app functionality</li>
+                    <li>For business transfers (mergers, acquisitions)</li>
+                    <li>When required by law or legal process</li>
+                    <li>With your explicit consent</li>
+                </ul>
+
+                <h3 style="color: #4a47a3; margin-top: 25px; margin-bottom: 15px;">Data Security</h3>
+                <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure.</p>
+
+                <h3 style="color: #4a47a3; margin-top: 25px; margin-bottom: 15px;">Your Rights</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access, update, or delete your personal information</li>
+                    <li>Control permissions for device access (location, camera, etc.)</li>
+                    <li>Opt-out of non-essential communications</li>
+                    <li>Request data portability or account deletion</li>
+                </ul>
+
+                <h3 style="color: #4a47a3; margin-top: 25px; margin-bottom: 15px;">Children's Privacy</h3>
+                <p>Questa does not knowingly collect personal information from children under 13. If we become aware that we have collected personal data from a child under 13 without parental consent, we will take steps to remove that information.</p>
+
+                <h3 style="color: #4a47a3; margin-top: 25px; margin-bottom: 15px;">Third-Party Services</h3>
+                <p>Questa may integrate with third-party services (Google, Facebook, Instagram, Twitter, LinkedIn) for account creation and login. When you use these services, their respective privacy policies also apply.</p>
+
+                <div class="highlight">
+                    <p><strong>Data Retention:</strong> We retain your personal data only for as long as necessary to provide our services and comply with legal obligations. You can request deletion of your data at any time.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>13. Updates to Terms and Privacy Policy</h2>
+                <p>We may update these Terms and Conditions and Privacy Policy from time to time. We will notify you of any changes by:</p>
+                <ul>
+                    <li>Posting the new Terms and Privacy Policy on this page</li>
+                    <li>Sending email notification to registered users</li>
+                    <li>Displaying a prominent notice within the application</li>
+                    <li>Updating the "Last updated" date at the top of this document</li>
+                </ul>
+                <p>You are advised to review these Terms and Privacy Policy periodically for any changes. Changes become effective when they are posted on this page.</p>
+            </div>
+
+            <div class="important-notice">
+                <h3>🛡️ Important Legal Notice</h3>
+                <p>By using Questa, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions and Privacy Policy. This agreement is legally binding and governs your use of the application.</p>
+                <p><strong>ALL RIGHTS RESERVED © 2025 VIKASH J & ANT SIGN TECHNOLOGIES</strong></p>
+            </div>
+                <h3>🛡️ Important Legal Notice</h3>
+                <p>By using Questa, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. This agreement is legally binding and governs your use of the application.</p>
+                <p><strong>ALL RIGHTS RESERVED © 2025 VIKASH J & ANT SIGN TECHNOLOGIES</strong></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>© 2025 VIKASH J & ANT SIGN TECHNOLOGIES</strong></p>
+            <p>QUESTA - ALL RIGHTS RESERVED</p>
+            <p>Proprietary Software - Unauthorized Use Prohibited</p>
+            <p><strong>Location:</strong> Tamil Nadu, India</p>
+            <p><strong>Contact:</strong> vikashspidey@gmail.com</p>
+            <p class="last-updated">Last Updated: July 11, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
